@@ -11,7 +11,7 @@ function git_prompt_info() {
   || ref=$(__git_prompt_git rev-parse --short HEAD 2> /dev/null) \
   || return 0
 
-  # CUSTOM CODE
+  # ====================== CUSTOM CODE ======================
   # Truncate the git branch name if longer than 35 characters
   local max_length
   max_length=40
@@ -22,6 +22,7 @@ function git_prompt_info() {
   if [[ ${ref_length} -gt ${max_length} ]]; then
     ref="${ref:0:$max_length}..."
   fi
+  # ==================== END CUSTOM CODE ====================
 
   # Use global ZSH_THEME_GIT_SHOW_UPSTREAM=1 for including upstream remote info
   local upstream
