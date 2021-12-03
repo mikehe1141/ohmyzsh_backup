@@ -14,6 +14,7 @@ function git_prompt_info() {
   # ====================== CUSTOM CODE ======================
   # Truncate the git branch name if longer than the value set on the global Git config
   # for oh-my-zsh.max-branch-length. If not set the default is 40.
+  # To set: git config --global oh-my-zsh.max-branch-length 40
   local max_length
   max_length=$(__git_prompt_git config --get oh-my-zsh.max-branch-length 2>/dev/null)
 
